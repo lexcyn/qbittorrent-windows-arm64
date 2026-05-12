@@ -108,8 +108,8 @@ jobs:
       - name: Build qBittorrent
         run: |
           PATH="${{ env.qt_path }}/bin:$PATH"
-          aria2c http://prdownloads.sourceforge.net/qbittorrent/qbittorrent/qbittorrent-${{ env.qbt_version }}/qbittorrent-${{ env.qbt_version }}.tar.gz
-          tar -xf qbittorrent-${{ env.qbt_version }}.tar.gz
+          aria2c http://prdownloads.sourceforge.net/qbittorrent/qbittorrent/qbittorrent-${{ env.qbt_version }}/qbittorrent-${{ env.qbt_version }}.tar.xz
+          tar -xf qbittorrent-${{ env.qbt_version }}.tar.xz
           cd qbittorrent-${{ env.qbt_version }}
           sed -i 's/Iphlpapi PowrProf/iphlpapi powrprof/g' src/base/CMakeLists.txt
           cmake \
