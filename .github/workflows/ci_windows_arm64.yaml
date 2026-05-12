@@ -12,7 +12,7 @@ jobs:
       libtorrent_path: "${{ github.workspace }}/libtorrent-msvc-arm64"
       qt_path: "${{ github.workspace }}/../qt-msvc-arm64"
       libt_version: "2.0.11"
-      qbt_version: "5.1.0"
+      qbt_version: "5.2.0"
       qt_version: "6.9.0"
 
     steps:
