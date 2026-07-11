@@ -51,10 +51,10 @@ jobs:
       - name: Install boost
         run: |
           aria2c `
-            "https://jaist.dl.sourceforge.net/project/boost/boost/1.88.0/boost_1_88_0.7z" `
+            "https://archives.boost.io/release/1.88.0/source/boost_1_88_0.tar.gz" `
             -d "${{ runner.temp }}" `
-            -o "boost.7z"
-          7z x "${{ runner.temp }}/boost.7z" -o"${{ github.workspace }}/.."
+            -o "boost.tar.gz"
+          tar -xzf "${{ runner.temp }}/boost.tar.gz" -o"${{ github.workspace }}/.."
           move "${{ github.workspace }}/../boost_*" "${{ env.boost_path }}"
 
       - name: Install Qt (host x64)
