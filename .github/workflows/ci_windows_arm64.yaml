@@ -54,7 +54,7 @@ jobs:
             "https://archives.boost.io/release/1.88.0/source/boost_1_88_0.tar.gz" `
             -d "${{ runner.temp }}" `
             -o "boost.tar.gz"
-          tar -xzf "${{ runner.temp }}/boost.tar.gz" -o"${{ github.workspace }}/.."
+          tar -xf "${{ runner.temp }}/boost.tar.gz" -o"${{ github.workspace }}/.."
           move "${{ github.workspace }}/../boost_*" "${{ env.boost_path }}"
 
       - name: Install Qt (host x64)
